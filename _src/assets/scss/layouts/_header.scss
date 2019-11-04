@@ -1,3 +1,13 @@
 .header {
-  border: 5px solid black;
+  // border: 5px solid black;
+  width: 44px;
+  height: 44px;
+  background-color: #0271bc;
+  display: flex;
+  justify-content: center;
+  &__ico {
+    align-self: center;
+    width: 16px;
+    height: 14px;
+  }
 }
