@@ -3,19 +3,117 @@
     
     <head>
         <meta charset="UTF-8" />
-        <title>Adalab Web Starter Kit</title>
-        <link rel="icon" href="./favicon.png" />
-        <link rel="stylesheet" href="./assets/css/main.css" />
+        <title>CristinaFerrerEvaluaciónMódulo1</title>
+        <link rel="stylesheet" href="./assets/css/main.css"
+        />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap"
+        rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap"
+        rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     
     <body>
-        <div class="page">
-            <header class="page__header">Header</header>
-            <main class="page__main">Main</main> <a class="link__adalab" href="https://adalab.es" target="_blank">Adalab</a>
+        <header class="header" role="banner"> <a class="anchor__header" id="header"></a>
 
-            <a
-            class="link__github" href="https://github.com" target="_blank">GitHub</a>
-        </div>
+            <div class="header__ico">
+                <img class="header__ico__img" src="./assets/images/ico-menu.svg" alt="burger icon"
+                />
+            </div>
+            <section class="header__hero">
+                 <h1 class="header__hero__title">
+      anonymous proxy
+    </h1>
+
+                <p class="header__hero__paragraph">In hac habitasse platea dictumst.</p>
+                <button class="header__hero__button"> <a class="header__hero__button__link" href="#aside" title="GoAside">
+        <img class="header__hero__button__img" src="./assets/images/ico-scroll-down.svg" alt="down arrow" />
+      </a>
+
+                </button>
+            </section>
+        </header>
+        <main class="main" role="main"> <a class="anchor__mainsection" id="mainsection"></a>
+
+            <p class="main__paragraph">insomnia tips</p>
+             <h2 class="main__title">looking through a window</h2>
+
+            <p class="main__paragraph2">Donec accumsan, nulla ut volutpat porttitor, quam odio tempus felis, at
+                luctus ex diam nec lectus. Vivamus semper sodales rutrum.</p>
+            <button class="main__button"> <a class="main__button__link" href="#mainsection" title="GoMain">
+      <div>go</div>
+    </a>
+
+            </button>
+        </main>
+        <aside class="aside" role="complementary"> <a class="anchor__aside" id="aside"></a>
+
+             <h2 class="aside__title">3 reasons to purchase</h2>
+
+            <div class="aside__container">
+                <article class="aside__container__article">
+                     <h3 class="aside__container__article__title">Ut sed metus</h3>
+
+                    <p class="aside__container__article__paragraph">Lorem ipsum dolor sit amet, consecteur.</p>
+                </article>
+                <article class="aside__container__article">
+                     <h3 class="aside__container__article__title">Curabitur ac erat</h3>
+
+                    <p class="aside__container__article__paragraph">Mauris mattis urna quis lorem molestie.</p>
+                </article>
+                <article class="aside__container__article">
+                     <h3 class="aside__container__article__title">Morbi dictum</h3>
+
+                    <p class="aside__container__article__paragraph">Aliquam in dolor et dolor tincidunt.</p>
+                </article>
+            </div>
+            <button class="aside__button"> <a class="aside__button__link" href="#mainsection" title="GoMain">
+      <div>more reasons</div>
+    </a>
+
+            </button>
+        </aside>
+        <footer class="footer">
+            <button class="footer__ico"> <a href="#header" title="GoHeader">
+      <img class="footer__ico__img" src="./assets/images/ico-arrow.svg" alt="up arrow" />
+    </a>
+
+            </button>
+            <nav class="footer__nav1">
+                <ul class="footer__nav1__ul">
+                    <li class="footer__nav1__ul__li"> <a class="footer__nav1__ul__li__link" href="#mainsection" title="Articles"> articles</a>
+
+                    </li>
+                    <li class="footer__nav1__ul__li"> <a class="footer__nav1__ul__li__link" href="#mainsection" title="Books"> books</a>
+
+                    </li>
+                    <li class="footer__nav1__ul__li"> <a class="footer__nav1__ul__li__link" href="#mainsection" title="Events"> events</a>
+
+                    </li>
+                    <li class="footer__nav1__ul__li"> <a class="footer__nav1__ul__li__link" href="#mainsection" title="Reasons"> reasons</a>
+
+                    </li>
+                    <li class="footer__nav1__ul__li"> <a class="footer__nav1__ul__li__link" href="#mainsection" title="Tips"> tips</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <nav class="footer__nav2">
+                <ul class="footer__nav2__ul">
+                    <li class="footer__nav2__ul__li"> <a class="footer__nav2__ul__li__link" href="#mainsection" title="Twitter"> twitter</a>
+
+                    </li>
+                    <li class="footer__nav2__ul__li"> <a class="footer__nav2__ul__li__link" href="#mainsection" title="Instagram"> instagram</a>
+
+                    </li>
+                    <li class="footer__nav2__ul__li"> <a class="footer__nav2__ul__li__link" href="#mainsection" title="Instagram"> mastodon.social</a>
+
+                    </li>
+                </ul>
+            </nav>
+            <p class="footer__paragraph">©2017</p>
+            <p class="footer__paragraph2">we ❤︎ components</p>
+        </footer>
     </body>
 
 </html>
