@@ -52,11 +52,9 @@
     }
     &__button {
       border-radius: 50%;
-
-      &__img {
-        width: 45px;
-        height: 45px;
-      }
+      background-color: white;
+      width: 45px;
+      height: 45px;
     }
   }
 }
