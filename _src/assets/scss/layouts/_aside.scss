@@ -2,15 +2,15 @@
   // border: 5px solid fuchsia;
   display: grid;
   grid-template-rows: auto auto auto;
-  background-color: #eff9ff;
+  background-color: $background-color;
 
   &__title {
-    font-size: 24px;
-    text-transform: capitalize;
+    font-size: $font-size-title;
+    text-transform: $transform-cap;
     justify-self: center;
     padding: 30px 15px 30px 15px;
-    font-family: "Roboto Slab", serif;
-    font-weight: bold;
+    font-family: $second-font-family;
+    font-weight: $font-weight;
   }
   &__container {
     display: grid;
@@ -23,13 +23,13 @@
 
       &__title {
         font-size: 18px;
-        font-family: "Roboto Slab", serif;
+        font-family: $second-font-family;
+        font-weight: $font-weight;
         padding-top: 45px;
         padding-bottom: 10px;
       }
       &__paragraph {
         font-size: 18px;
-        font-family: "Roboto", sans-serif;
         width: 180px;
         height: 63px;
       }
@@ -39,7 +39,7 @@
     font-size: 20px;
     width: 184px;
     height: 45px;
-    background-color: #f26002;
+    background-color: $color-button;
     border-radius: 45px;
     margin-bottom: 45px;
     margin-top: 60px;
@@ -48,8 +48,8 @@
 
     &__link {
       text-decoration: none;
-      color: white;
-      text-transform: capitalize;
+      color: $color-light;
+      text-transform: $transform-cap;
     }
   }
 }
