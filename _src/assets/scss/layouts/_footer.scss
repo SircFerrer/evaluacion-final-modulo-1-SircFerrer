@@ -1,12 +1,13 @@
 .footer {
-  // border: 5px solid blue;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-content: start;
   width: 100%;
   height: 465px;
   background-color: $second-background-color;
+  @media all and (min-width: 768px) and (max-width: 1200px) {
+    height: 240px;
+  }
+  @media all and (min-width: 1200px) {
+    height: 240px;
+  }
 
   &__ico {
     background-color: $color-light;
@@ -14,51 +15,112 @@
     height: 45px;
     border-radius: 50%;
     transform: translateY(-50%);
-    align-self: center;
     border: 2px solid white;
   }
-  &__nav1 {
-    align-self: center;
-    // margin-top: 60px;
-    &__ul {
-      &__li {
-        list-style-type: none;
-        text-align: center;
-        padding-top: 15px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media all and (min-width: 768px) and (max-width: 1200px) {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding-right: 39px;
+      padding-left: 39px;
+    }
+    @media all and (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding-right: 370px;
+      padding-left: 370px;
+    }
+    &__nav1 {
+      align-self: center;
+      // margin-top: 60px;
+      @media all and (min-width: 768px) and (max-width: 1200px) {
+        // align-self: center;
+        border: 1px solid black;
+        align-self: flex-start;
+      }
 
-        &__link {
-          text-decoration: none;
-          text-transform: $transform-up;
-          color: $color-light;
+      &__ul {
+        &__li {
+          list-style-type: none;
+          text-align: center;
+          padding-top: 15px;
+          @media all and (min-width: 768px) and (max-width: 1200px) {
+            text-align: left;
+          }
+
+          &__link {
+            text-decoration: none;
+            text-transform: $transform-up;
+            color: $color-light;
+          }
         }
       }
     }
-  }
-  &__nav2 {
-    align-self: center;
-    margin-top: 60px;
-    &__ul {
-      &__li {
-        list-style-type: none;
-        text-align: center;
-        padding-top: 15px;
+    &__nav2 {
+      align-self: center;
+      margin-top: 60px;
+      @media all and (min-width: 768px) and (max-width: 1200px) {
+        border: 1px solid black;
+        align-self: flex-start;
+      }
+      &__ul {
+        &__li {
+          list-style-type: none;
+          text-align: center;
+          padding-top: 15px;
+          @media all and (min-width: 768px) and (max-width: 1200px) {
+            text-align: left;
+          }
+          @media all and (min-width: 1200px) {
+            text-align: left;
+          }
 
-        &__link {
-          text-decoration: none;
-          text-transform: $transform-up;
-          color: $color-light;
+          &__link {
+            text-decoration: none;
+            text-transform: $transform-up;
+            color: $color-light;
+          }
         }
       }
     }
-  }
-  &__paragraph {
-    text-align: center;
-    color: $color-light;
-    padding-top: 20px;
-  }
-  &__paragraph2 {
-    text-align: center;
-    color: $color-light;
-    padding-bottom: 45px;
+    &__paragraph {
+      @media all and (min-width: 768px) and (max-width: 1200px) {
+        border: 2px solid black;
+        order: -1;
+      }
+      @media all and (min-width: 1200px) {
+        order: -1;
+      }
+      &__copy {
+        text-align: center;
+        color: $color-light;
+        padding-top: 20px;
+        @media all and (min-width: 768px) and (max-width: 1200px) {
+          text-align: left;
+          font-size: 14px;
+        }
+        @media all and (min-width: 1200px) {
+          text-align: left;
+        }
+      }
+      &__heart {
+        text-align: center;
+        color: $color-light;
+        padding-bottom: 45px;
+        @media all and (min-width: 768px) and (max-width: 1200px) {
+          text-align: left;
+          font-size: 14px;
+        }
+        @media all and (min-width: 1200px) {
+          text-align: left;
+        }
+      }
+    }
   }
 }

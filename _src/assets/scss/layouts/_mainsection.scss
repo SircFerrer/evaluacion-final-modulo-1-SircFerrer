@@ -5,6 +5,12 @@
   padding-bottom: 45px;
   display: flex;
   flex-direction: column;
+  @media all and (min-width: 768px) and (max-width: 1200px) {
+    padding: 30px 39px 60px 39px;
+  }
+  @media all and (min-width: 1200px) {
+    padding: 90px 275px 60px 275px;
+  }
   &__paragraph {
     color: #8ccbea;
     text-transform: $transform-cap;
@@ -17,11 +23,21 @@
     font-weight: $font-weight;
     width: 70%;
     padding-bottom: 15px;
+    @media all and (min-width: 768px) and (max-width: 1200px) {
+      padding-top: 10px;
+      padding-bottom: 30px;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 32px;
+    }
   }
   &__paragraph2 {
     font-size: 18px;
     color: #4a4a4a;
     padding-bottom: 30px;
+    @media all and (min-width: 1200px) {
+      font-size: 20px;
+    }
   }
   &__button {
     font-size: 20px;
