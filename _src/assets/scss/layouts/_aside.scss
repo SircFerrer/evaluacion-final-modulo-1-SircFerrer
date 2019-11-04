@@ -43,13 +43,14 @@
     border-radius: 45px;
     margin-bottom: 45px;
     margin-top: 60px;
-
+    border: 2px solid #f26002;
     justify-self: center;
 
     &__link {
       text-decoration: none;
       color: $color-light;
       text-transform: $transform-cap;
+      font-weight: $second-font-weight;
     }
   }
 }

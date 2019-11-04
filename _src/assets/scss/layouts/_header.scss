@@ -54,8 +54,15 @@
     &__button {
       border-radius: 50%;
       background-color: $color-light;
+      border: 2px solid white;
       width: 45px;
       height: 45px;
+      &__link {
+        color: white;
+        &:hover {
+          color: black;
+        }
+      }
     }
   }
 }
