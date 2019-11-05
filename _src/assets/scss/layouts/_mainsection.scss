@@ -1,5 +1,4 @@
 .main {
-  // border: 5px solid green;
   margin-left: 15px;
   padding-top: 30px;
   padding-bottom: 45px;
@@ -47,11 +46,18 @@
     border: 2px solid #f26002;
     border-radius: 45px;
     font-weight: $second-font-weight;
-    transition: color 3s ease;
+    transition: color 1s ease;
+    &:hover {
+      background: $color-button;
+    }
     &__link {
       text-decoration: none;
       color: $color-button;
       text-transform: $transform-cap;
+      transition: color 1s ease;
+      &:hover {
+        color: $color-light;
+      }
     }
   }
 }

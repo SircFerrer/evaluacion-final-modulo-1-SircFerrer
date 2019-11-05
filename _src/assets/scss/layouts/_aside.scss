@@ -1,5 +1,4 @@
 .aside {
-  // border: 5px solid fuchsia;
   display: grid;
   grid-template-rows: auto auto auto;
   background-color: $background-color;
@@ -71,6 +70,10 @@
     margin-top: 60px;
     border: 2px solid #f26002;
     justify-self: center;
+    transition: width 1s ease;
+    &:hover {
+      width: 250px;
+    }
 
     &__link {
       text-decoration: none;

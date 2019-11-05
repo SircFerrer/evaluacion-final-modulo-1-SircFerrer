@@ -10,7 +10,6 @@
   justify-content: flex-end;
 
   &__ico {
-    // border: 5px solid black;
     width: 44px;
     height: 44px;
     background-color: #0271bc;
@@ -27,7 +26,6 @@
     }
   }
   &__hero {
-    // border: 2px solid white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,8 +63,9 @@
       border-radius: 50%;
       background-color: $color-light;
       border: 2px solid white;
-      width: 45px;
-      height: 45px;
+      width: 23px;
+      height: 30px;
+      padding: 11px 7px 0px 11px;
       &__link {
         color: white;
         &:hover {

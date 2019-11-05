@@ -20,6 +20,9 @@
     transform: translateY(-50%);
     border: 2px solid white;
     margin: 0 auto;
+    animation-name: button;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
   }
   &__container {
     display: flex;
@@ -135,5 +138,15 @@
         }
       }
     }
+  }
+}
+@keyframes button {
+  from {
+    opacity: 0;
+    transform: scale(1) rotate(-150deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(3);
   }
 }
