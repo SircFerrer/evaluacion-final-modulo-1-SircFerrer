@@ -70,7 +70,7 @@
     margin-top: 60px;
     border: 2px solid #f26002;
     justify-self: center;
-    transition: width 1s ease;
+    transition: 1s ease;
     &:hover {
       width: 250px;
     }
@@ -80,6 +80,24 @@
       color: $color-light;
       text-transform: $transform-cap;
       font-weight: $second-font-weight;
+    }
+
+    @media all and (min-width: 768px) and (max-width: 1200px) {
+      width: 210px;
+      height: 45px;
+      transition: 1s ease;
+    }
+    &:hover {
+      width: 270px;
+    }
+
+    @media all and (min-width: 1200px) {
+      width: 255px;
+      height: 45px;
+      transition: 1s ease;
+    }
+    &:hover {
+      width: 300px;
     }
   }
 }

@@ -1,97 +1,61 @@
-![Adalab](_src/assets/images/logo-adalab-80px.png)
-# Adalab web starter kit
-Ahoy! Esta es nuestro Starter Kit en node/gulp para este primer contacto con el desarrollo web
-Incluye SCSS, un sistema de plantillas HTMl y un web server.
+Ejercicio de evaluación final módulo 1 Cristina Ferrer Carballo. Grupo mañana. Promoción Hamilton.
 
-## Guía de inicio rápido
-Necesitarás instalar [Node.js](https://nodejs.org/) y [Gulp](https://gulpjs.com) para trabajar con este Starter Kit, luego:
-1. Descarga o clona el repositorio
-2. Instala las dependencias locales con `npm install`
-3. Arranca el kit con `gulp`
+Nos proponen un ejercicio de una página y se nos pide que por lo menos contenga lo sigiuiente:
+Usar Sass.
+Usar flexbox y CSS Grid.
+Usar media queries.
+Resolver algunas interacciones usando transiciones.
+Con respecto a la maquetación:
 
-## Espera, ¿esto se hace siempre?
-> ### Solo una vez al principio en cada ordenador que utilicemos:
-- Instalamos node
-- Instalamos el comando de gulp de forma global para poder usarlo desde cualquier carpeta usando `npm install --global gulp-cli`
+1. El botón de hamburguesa (en la esquina superior izquierda) debe estar fijo en la parte superior de la
+   pantalla y no debe desaparecer al hacer scroll.
+2. Primer módulo (Anonymous proxy): debe estar maquetado con flexbox y debe ocupar el alto de la
+   ventana del navegador.
+3. Segundo módulo (Looking Through A Window): se puede maquetar usando las propiedades de CSS
+   que se deseen.
+4. Tercer módulo (3 Reasons To Purchase): los 3 elementos del listado deben estar maquetados con
+   CSS Grid.
+5. Cuarto módulo (footer): se debe maquetar usando flexbox.
 
-> ### Cada vez que descarguemos o clonemos un repo:
-- `npm install` para instalar los paquetes necesarios para convertir Sass a CSS, minizarlo, etc.
+   Tres interacciones:
 
-> ### Cada vez que estemos trabajando con nuestro código:
-- Desde nuestra terminal, ejecutamos el comando `gulp` para que realice la tarea por defecto, que en el caso del `gulpfile.js` que tenemos en adalab-web-starter-kit estará pendiente de nuestros archivos Sass, html y JavaScript y los compilará, minificará y/o recargará el servidor cada vez que hagamos un cambio
+6. El botón de flecha del módulo hero debe enlazar a la sección "3 Reasons To Purchase".
+7. El botón de flecha del footer debe enlazar hasta el inicio de la página.
+8. En el hover de los botones ("Go" y "3 Reasons To Purchase") se debe incluir una transición que
+   dejamos a vuestra elección (en el color, tamaño, etc.).
+9. BONUS: hacer una pequeña animación en el botón del footer.
 
-## Tareas de gulp incluidas
-### Inicio de un web server para desarrollo
-```
-npm start
-```
-o lo que en este proyecto es lo mismo:
+A continuación expongo parte por parte como he considerado resolver el ejercicio:
 
-```
-gulp
-```
-Lanza un webserver con BrowserSync y varios watchers estarán pendientes de los archivos SCSS/JS/HTML, en la carpeta **public/**, para recargar el navegador cuando se necesite.
+He devidido en partials el index.html, en total:
+4 partials.
+header
+main section
+aside
+footer
 
-### Versión lista para subir a producción
+HEADER:
+He incluido el icono hamburguesa, la foto de fondo, el texto con el título, el subtítulo y el botón.
+AL contenedor header le he dado 3 elementos:
 
-Para generar los ficheros para producción ejecuta:
+- Hamburguesa
+- Texto (título + subtítulo)
+- Botón
 
-```
-npm run docs
-```
-o lo que en este proyecto es lo mismo:
-```
-gulp docs
-```
-En la carpeta **docs/** se generarán los CSS y JS minimizados y sin sourcemaps listos para subir al repo. A continuación súbelos al repo y activa en GitHub Pages la opción **master/docs/**, para que GitHub Pages sirva la página desde la carpeta **docs/**.
+Utilizando el display Flex he podido colocar los elementos tal y como se solicitaba.
+A la hamburguesa le he dado una posición fija.
+El botón cumple su función de llevarte a otra parte de la página.
 
----
+MAIN SECTION:
+He utilizado la etiqueta MAIN ya que considero que es la sección principal de la página.
+He utilizado el display Flex ya que era una opción más adecuada para este contenedor ya que contiene 4 elementos que se comportan de manera parecida.
 
-Si quieres generar los ficheros listos para producción y además subirlos a GitHub directamente ejecuta el siguiente comando:
-```
-npm run push-docs
-```
-Este comando borra la carpeta **docs/**, la vuelve a generar, crea un commit con los nuevos ficheros y hace un `git push`, todo del tirón. ¿Cómo se te queda el cuerpo?. Si quieres saber cómo funciona échale un ojo al fichero `package.json`.
+ASIDE:
+La siguiente sección le he dado una etiqueta ASIDE porque según tal y como entiendo la página esta parte es de importancia secundaria.
+EN este caso el ejercicio solicitaba GRID y por lo tanto el display a toda la sección ha sido GRID.
+He utilizado la opción de auto al grid template column y al grid template row ya que he podido ver que podía utilizar todo el espacio y después arreglar con paddings en cada una de las celdas.
+A
+FOOTER:
+En el footer he utilizado display flex, el mayor reto ha sido cambiar a la opción tablet y ordenador ya que el orden cambiaba pero utilzando la opción ORDER que te permite flex he podido hacerlo.
 
-## Flujo de archivos con gulp
-
-Estas tareas de gulp producen el siguiente flujo de archivos:
-
-![Gulp flow](./gulp-flow.png)
-
-## Estructura del proyecto
-Nuestro **gulpfile.js** usa un JSON de configuración con las rutas de los archivos a generar/vigilar.
-
-La estructura de carpetas tiene esta pinta:
-```
-/
-`- _src
-   |- assets
-   |  |- icons
-   |  |- images
-   |  |- js
-   |  `- scss
-   |     `- core
-   |
-   `- templates
-      `- partials
-
-```
-
-## HTML
-Viene incluído el paquete [**gulp-html-partial**](https://www.npmjs.com/package/gulp-html-partial) que nos va a permitir tener un sistema de plantillas html
-
-## Imágenes e iconos
-Tenemos en **_src/** una carpeta para las imágenes del proyecto y una para los iconos como el favicon o los iconos de dispositivos móviles. Estos últimos se generan en la raíz de las carpetas **public/** y **docs/**
-
-## CSS
-Viene incluído el paquete [**gulp-combine-mq**](https://www.npmjs.com/package/gulp-combine-mq) que agrupa todas las mediaqueries al final del documento css.
-
-## JS
-Podemos usar parciales de JS: en el JSON de configuración, **config.json** especificamos los archivos JS que utilizamos y en el orden que deben procesarse.
-
-## ¿Cómo actualizo si tengo una versión anterior?
-En principio puedes descargar todos los archivos fuera de **_src/** y sustituir los de tu proyecto. Además deberías replicar la estructura de carpetas dentro de **_src/**.
-
-## Falta algo?
-Echas de menos que el kit haga algo en concreto? Pidelo sin problema a través de los Issues o si te animas a mejorarlo mándanos un PR :)
+Con respecto a los botones he utilizado en dos la etiqueta botón porque para centrar el contenido me resulta más eficiente.
