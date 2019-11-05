@@ -14,6 +14,10 @@
     color: #8ccbea;
     text-transform: $transform-cap;
     font-size: 14px;
+    padding-bottom: 1px;
+    @media all and (min-width: 1200px) {
+      font-size: 16px;
+    }
   }
   &__title {
     text-transform: $transform-cap;
@@ -47,6 +51,10 @@
     border-radius: 45px;
     font-weight: $second-font-weight;
     transition: color 1s ease;
+    @media all and (min-width: 1200px) {
+      width: 160px;
+      height: 45px;
+    }
     &:hover {
       background: $color-button;
     }
