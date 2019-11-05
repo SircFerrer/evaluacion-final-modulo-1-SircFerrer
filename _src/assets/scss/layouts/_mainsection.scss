@@ -47,7 +47,7 @@
     border: 2px solid #f26002;
     border-radius: 45px;
     font-weight: $second-font-weight;
-
+    transition: color 3s ease;
     &__link {
       text-decoration: none;
       color: $color-button;

@@ -2,6 +2,7 @@
   width: 100%;
   height: 465px;
   background-color: $second-background-color;
+
   @media all and (min-width: 768px) and (max-width: 1200px) {
     height: 240px;
   }
@@ -10,12 +11,15 @@
   }
 
   &__ico {
-    background-color: $color-light;
-    width: 45px;
-    height: 45px;
+    display: block;
     border-radius: 50%;
+    background-color: $color-light;
+    width: 29px;
+    height: 31px;
+    padding: 9px 2px 0 11px;
     transform: translateY(-50%);
     border: 2px solid white;
+    margin: 0 auto;
   }
   &__container {
     display: flex;
@@ -38,10 +42,8 @@
     }
     &__nav1 {
       align-self: center;
-      // margin-top: 60px;
+
       @media all and (min-width: 768px) and (max-width: 1200px) {
-        // align-self: center;
-        border: 1px solid black;
         align-self: flex-start;
       }
 
@@ -58,6 +60,9 @@
             text-decoration: none;
             text-transform: $transform-up;
             color: $color-light;
+            &:hover {
+              color: $color-button;
+            }
           }
         }
       }
@@ -66,8 +71,11 @@
       align-self: center;
       margin-top: 60px;
       @media all and (min-width: 768px) and (max-width: 1200px) {
-        border: 1px solid black;
         align-self: flex-start;
+        margin-top: 0px;
+      }
+      @media all and (min-width: 1200px) {
+        margin-top: 0px;
       }
       &__ul {
         &__li {
@@ -85,13 +93,15 @@
             text-decoration: none;
             text-transform: $transform-up;
             color: $color-light;
+            &:hover {
+              color: $color-button;
+            }
           }
         }
       }
     }
     &__paragraph {
       @media all and (min-width: 768px) and (max-width: 1200px) {
-        border: 2px solid black;
         order: -1;
       }
       @media all and (min-width: 1200px) {
@@ -113,6 +123,9 @@
         text-align: center;
         color: $color-light;
         padding-bottom: 45px;
+        &__color {
+          color: $color-button;
+        }
         @media all and (min-width: 768px) and (max-width: 1200px) {
           text-align: left;
           font-size: 14px;
