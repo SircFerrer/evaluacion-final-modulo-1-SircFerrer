@@ -1,0 +1,19 @@
+.container {
+  display: none;
+  @media all and (min-width: 768px) {
+    display: block;
+  }
+
+  &__title {
+    @media all and (min-width: 768px) {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__text {
+    @media all and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
